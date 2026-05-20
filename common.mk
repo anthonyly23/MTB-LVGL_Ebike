@@ -101,6 +101,7 @@ endif
 COMPONENTS+=GFXSS
 
 # NOTE: Check the JSON file for the command parameters
-COMBINE_SIGN_JSON?=configs/boot_with_extended_boot.json
+#COMBINE_SIGN_JSON?=configs/boot_with_extended_boot.json
+COMBINE_SIGN_JSON?=./bsps/TARGET_$(TARGET)/config/GeneratedSource/boot_with_bldr.json
 
 include ../common_app.mk
