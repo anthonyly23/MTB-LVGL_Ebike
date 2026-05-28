@@ -76,6 +76,13 @@ int main(void)
     /* Initialize the device and board peripherals */
     result = cybsp_init();
 
+    Cy_GPIO_Set(CYBSP_SERIAL_INT_1_PORT, CYBSP_SERIAL_INT_1_PIN);
+    Cy_SysLib_Delay(10);
+    Cy_GPIO_Clr(CYBSP_SERIAL_INT_1_PORT, CYBSP_SERIAL_INT_1_PIN);
+    Cy_SysLib_Delay(10);
+    Cy_GPIO_Set(CYBSP_SERIAL_INT_1_PORT, CYBSP_SERIAL_INT_1_PIN);
+    Cy_SysLib_Delay(10);
+    Cy_GPIO_Clr(CYBSP_SERIAL_INT_1_PORT, CYBSP_SERIAL_INT_1_PIN);
     /* Board initialization failed. Stop program execution */
     if (CY_RSLT_SUCCESS != result)
     {

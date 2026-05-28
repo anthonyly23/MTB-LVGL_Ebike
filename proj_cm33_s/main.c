@@ -42,7 +42,7 @@
 
 #include "cy_pdl.h"
 #include "cybsp.h"
-
+#include "cy_gpio.h"
 /*****************************************************************************
 * Macros
 ******************************************************************************/
@@ -68,6 +68,7 @@ int main(void)
 
     /* Set up internal routing, pins, and clock-to-peripheral connections */
     result = cybsp_init();
+
 
     /* Board initialization failed. Stop program execution */
     if (CY_RSLT_SUCCESS != result)
